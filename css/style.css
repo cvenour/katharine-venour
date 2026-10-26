@@ -1,0 +1,126 @@
+/* Fonts: the same files the Weebly site uses, self-hosted so the site makes no calls to other servers */
+@font-face { font-family: Montserrat; font-weight: 400; src: url(../fonts/montserrat-regular.woff2) format('woff2'); font-display: swap; }
+@font-face { font-family: Montserrat; font-weight: 700; src: url(../fonts/montserrat-bold.woff2) format('woff2'); font-display: swap; }
+@font-face { font-family: Actor; font-weight: 400; src: url(../fonts/actor-regular.woff2) format('woff2'); font-display: swap; }
+@font-face { font-family: 'Source Sans Pro'; font-weight: 400; src: url(../fonts/source-sans-pro-regular.woff2) format('woff2'); font-display: swap; }
+@font-face { font-family: 'Source Sans Pro'; font-weight: 400; font-style: italic; src: url(../fonts/source-sans-pro-italic.woff2) format('woff2'); font-display: swap; }
+@font-face { font-family: 'Source Sans Pro'; font-weight: 700; src: url(../fonts/source-sans-pro-bold.woff2) format('woff2'); font-display: swap; }
+
+/* Reset */
+*, *::before, *::after { box-sizing: border-box; }
+html, body, div, ul, ol, li, h1, h2, form, fieldset, input, textarea, img, table, td, tr { margin: 0; padding: 0; border: 0; }
+ul { list-style: none; }
+img { max-width: 100%; height: auto; }
+table { border-collapse: collapse; }
+
+body { color: #333; font: 16px/1 'Source Sans Pro', Arial, sans-serif; background: #fff; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
+a { color: #999; transition: all 200ms linear; }
+
+/* Text */
+h2 { font-family: Montserrat, sans-serif; font-weight: 400; margin: 0 auto 1em; font-size: 1.25em; letter-spacing: -0.025em; }
+.paragraph { margin: 0 auto 2em; line-height: 1.75; }
+h2, .paragraph { word-wrap: break-word; }
+.paragraph a { color: rgba(51,51,51,.6); }
+.paragraph a:hover { text-decoration: underline; }
+.paragraph ul, .paragraph ol { padding-left: 3em; margin: 5px 0; }
+.paragraph ul { list-style: disc outside; }
+.paragraph ol { list-style: decimal outside; }
+.paragraph li { padding-left: 5px; margin: 3px 0 0; }
+
+#wsite-content .paragraph { font-family: Actor, sans-serif; color: #3f3f3f; }
+#wsite-content h2 { font-family: Montserrat, sans-serif; font-weight: 700; }
+#banner h2 { margin: 0 auto; font-size: 60px; font-weight: 900; line-height: 1; text-transform: uppercase; letter-spacing: -0.02em; }
+#banner .paragraph { color: #666; font-family: Montserrat, sans-serif; font-size: 1.15em; line-height: 1.25; letter-spacing: -0.015em; margin: .75em auto; }
+
+hr.styled-hr { height: 1px; margin: 0 auto; background: #d8d8d8; border: 0; }
+
+/* Buttons */
+.wsite-button { display: inline-block; text-decoration: none; font-family: Montserrat, sans-serif; font-weight: 500; text-transform: uppercase; letter-spacing: -0.02em; line-height: 1; font-size: 14px; }
+.wsite-button-inner { display: inline-block; padding: .85em 1.5em .75em; color: #fff; background: rgba(51,51,51,.6); transition: all 200ms linear; }
+.wsite-button:hover .wsite-button-inner { background: #333; }
+.wsite-button-highlight .wsite-button-inner { color: #333; background: none; border: 2px solid #333; }
+.wsite-button-highlight:hover .wsite-button-inner { color: #fff; background: #333; }
+.wsite-button-large { font-size: 18px; }
+.wsite-button-large .wsite-button-inner { padding: .9em 1.65em .8em; }
+#banner .wsite-button { margin-top: 10px; }
+
+/* Layout: photo on the left half, content on the right half */
+#panel-one { position: fixed; top: 0; left: 0; width: 50%; height: 100%; }
+#panel-one .photo { position: absolute; inset: 0; background-repeat: no-repeat; background-size: cover; }
+.shade { position: absolute; inset: 0; background: linear-gradient(to bottom, rgba(51,51,51,.2) 0%, rgba(51,51,51,0) 100%); }
+#panel-two { margin-left: 50%; min-height: 100vh; }
+.container { padding: 40px 80px; }
+#footer { height: 237px; padding: 0 80px; }
+#footer::before { content: "" ; display: block; height: 1px; background: #d8d8d8; margin-bottom: 20px; }
+.scrolltop { display: none; }
+
+/* Logo and menu button */
+.hamburger { position: fixed; top: 40px; left: 40px; z-index: 6; width: 30px; height: 27px; padding: 0; border: 0; cursor: pointer; background: none; }
+#panel-one .hamburger { position: absolute; }
+.hamburger span { position: absolute; inset: 0; background: center / 100% 100% no-repeat url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 27'%3E%3Crect width='30' height='27' rx='2' fill='%23fff'/%3E%3Cpath d='M7 8h16M7 13.5h16M7 19h16' stroke='%23666' stroke-width='2'/%3E%3C/svg%3E"); transition: opacity 200ms linear; }
+#nav .hamburger span { background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 27'%3E%3Ccircle cx='15' cy='13.5' r='13' fill='%23fff'/%3E%3Cpath d='M10 8.5l10 10M20 8.5l-10 10' stroke='%23333' stroke-width='1.8'/%3E%3C/svg%3E"); }
+#logo { position: absolute; top: 40px; left: 0; padding: 0 90px; z-index: 1; }
+#logo a { color: #fff; text-decoration: none; font-family: Montserrat, sans-serif; font-size: 1.6em; line-height: 1.25; font-weight: 900; text-transform: uppercase; letter-spacing: -0.035em; }
+
+/* Slide-in menu */
+#nav { position: fixed; top: 0; left: 0; width: 50%; height: 100%; padding: 80px 40px; background: #222; text-align: center; opacity: 0; z-index: -1; display: flex; align-items: center; transition: opacity .35s ease-in-out, z-index .1s .35s ease-in-out; }
+#nav ul { width: 100%; }
+#nav li a { display: block; padding: 10px 20px; color: #999; text-decoration: none; font-family: Montserrat, sans-serif; font-size: 1.15em; font-weight: 500; text-transform: uppercase; }
+#nav #active a, #nav a:hover { color: #fff; }
+.overlay { position: fixed; inset: 0; background: #000; opacity: 0; z-index: -1; transition: opacity .35s ease-in-out, z-index .1s .35s ease-in-out; }
+body.menu-open #nav { opacity: 1; z-index: 5; transition: opacity .35s ease-in-out; }
+body.menu-open .overlay { opacity: .7; z-index: 5; transition: opacity .35s ease-in-out; }
+
+/* Images, columns and photo galleries (the galleries' sizes are inline in the page) */
+.wsite-image { position: relative; }
+.wsite-multicol-table { table-layout: fixed; width: 100%; }
+.wsite-multicol-col { vertical-align: top; }
+.galleryImageBorder { border-style: solid; border-color: rgba(0,0,0,.13); }
+.imageGallery::after { content: ''; display: table; clear: both; }
+
+/* Lightbox */
+#lightbox { position: fixed; inset: 0; z-index: 20; background: rgba(0,0,0,.85); display: none; align-items: center; justify-content: center; }
+#lightbox.open { display: flex; }
+#lightbox img { max-width: 92vw; max-height: 92vh; }
+#lightbox button { position: absolute; background: none; color: #fff; font-size: 40px; border: 0; cursor: pointer; padding: 20px; }
+#lightbox .prev { left: 0; } #lightbox .next { right: 0; } #lightbox .close { top: 0; right: 0; }
+
+/* Wider than a phone: larger body text (Katharine's own Weebly setting) */
+@media (min-width: 768px) {
+  #wsite-content .paragraph { font-size: 18px; line-height: 23px; }
+  #wsite-content h2 { font-size: 29px; }
+}
+
+/* Wider than a phone: the banner has a minimum height with its text centred
+   in it, and the main section is at least 400px tall, as on Weebly */
+@media (min-width: 768px) {
+  #banner { display: flex; flex-direction: column; justify-content: center; min-height: var(--banner-height, 230px); }
+  #main { min-height: 400px; }
+}
+
+/* Tablet and phone */
+@media (max-width: 1024px) {
+  body { font-size: 14px; }
+  #panel-one { position: relative; width: 100%; height: 400px; }
+  #panel-two { margin-left: 0; min-height: 0; }
+  .container { padding: 40px 60px; }
+  #footer { padding: 0 60px; height: 235px; }
+  #logo a { line-height: 1.5; }
+  #nav { width: 100%; }
+  .scrolltop { display: inline-block; padding: 8px 5px; font-size: 12px; line-height: 8px; font-family: Montserrat, sans-serif; text-transform: uppercase; color: #fff; background: #ccc; text-decoration: none; }
+}
+@media (max-width: 767px) {
+  #panel-one { height: 220px; }
+  .container { padding: 30px 20px; }
+  #footer { padding: 0 20px; }
+  #nav { padding: 60px 20px; }
+  .hamburger { left: 20px; top: 20px; }
+  #logo { top: 20px; right: 0; padding: 0 90px; text-align: center; }
+  #footer { height: 275px; }
+  #banner h2 { font-size: 36px; }
+  .wsite-spacer { height: 15px !important; }
+  .imageGallery > div { width: 50% !important; }
+  .wsite-multicol-col { display: block; width: auto !important; max-width: 100%; margin: 0 auto 1em; }
+}
+
+/* Small refinements to match the original */
